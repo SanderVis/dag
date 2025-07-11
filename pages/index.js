@@ -1,9 +1,15 @@
+import Sidebar from '../components/Sidebar'
+import Editor from '../components/Editor'
+import Searchbar from '../components/Searchbar'
 
 export default function Home() {
   return (
-    <div style={{ padding: "2rem", fontFamily: "Arial" }}>
-      <h1>Welcome to DiagnoAssist</h1>
-      <p>This is your medical knowledge platform. Use the sidebar to navigate bookmarks and notes.</p>
+    <div style={{ display: 'flex', height: '100vh' }}>
+      <Sidebar />
+      <div style={{ flex: 1, padding: '1rem' }}>
+        <Searchbar />
+        <Editor />
+      </div>
     </div>
-  );
+  )
 }
